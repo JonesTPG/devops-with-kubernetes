@@ -1,0 +1,5 @@
+Assignment completed with the following commands:
+
+k3d cluster create -a 2
+kubectl create deployment 1.01-dep --image=jonestpg/1.01
+kubectl logs -f 1.01-dep-776bc89bd5-tkrzq
