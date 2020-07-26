@@ -1,0 +1,4 @@
+Assignment completed with the following commands:
+
+kubectl create deployment 1.02-dep --image=jonestpg/1.02
+kubectl logs -f 1.02-dep-894d4d98b-j9nj9
