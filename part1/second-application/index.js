@@ -5,7 +5,7 @@ const port = 3000;
 
 let counter = 0;
 
-app.get("/", (req, res) => {
+app.get("/pingpong", (req, res) => {
   counter = counter + 1;
   res.send("pong" + counter);
 });
