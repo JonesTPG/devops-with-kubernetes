@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: project
-          image: jonestpg/1.02
+          image: jonestpg/1.05

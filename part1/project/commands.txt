@@ -1,5 +1,10 @@
+docker build -t 1.05 .
+docker tag 1.05 jonestpg/1.05
+docker push jonestpg/1.05
+
 kubectl apply -f manifests/deployment.yaml
-
-kubectl logs project-86c7d59cbf-q6vwk
-
+kubectl get deployments.apps 
+kubectl logs project-86c7d59cbf-qtpzq 
+kubectl get pods
+kubectl port-forward project-86c7d59cbf-qtpzq 3003:3000
 kubectl delete -f manifests/deployment.yaml

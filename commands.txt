@@ -13,8 +13,10 @@ k3d cluster list
 Delete cluster(s):
 k3d cluster delete
 
-Tag a docker build:
-docker tag [local_image] jonestpg/[image]
+Build, tag and push a docker image:
+docker build -t [name] .
+docker tag [name] jonestpg/[name]
+docker push jonestpg/[name]
 
 Create deployment from a image in the docker hub: 
 kubectl create deployment 1.01-dep --image=jonestpg/1.01
