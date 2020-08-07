@@ -1,0 +1,5 @@
+kubectl apply -f manifests/deployment.yaml
+
+kubectl logs main-application-8689957678-tzk8d
+
+kubectl delete -f manifests/deployment.yaml
