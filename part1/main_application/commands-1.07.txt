@@ -1,0 +1,12 @@
+docker build -t 1.07 .
+docker tag 1.07 jonestpg/1.07
+docker push jonestpg/1.07
+
+
+kubectl apply -f manifests/deployment.yaml
+kubectl apply -f manifests/service.yaml
+kubectl apply -f manifests/ingress.yaml
+kubectl delete -f manifests/ingress.yaml
+kubectl delete -f manifests/service.yaml
+kubectl delete -f manifests/deployment.yaml
+
