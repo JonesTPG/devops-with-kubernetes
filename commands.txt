@@ -1,0 +1,27 @@
+Display current cluster info: 
+kubectl cluster-info
+
+Create cluster with two agent nodes: 
+k3d cluster create -a 2
+
+Start/stop clusters:
+k3d cluster start/stop
+
+List clusters:
+k3d cluster list
+
+Delete cluster(s):
+k3d cluster delete
+
+Tag a docker build:
+docker tag [local_image] jonestpg/[image]
+
+Create deployment from a image in the docker hub: 
+kubectl create deployment 1.01-dep --image=jonestpg/1.01
+
+View deployments/pods:
+kubectl get deployments/pods
+
+Display logs of a deployment:
+kubectl logs -f 1.01-dep-776bc89bd5-tkrzq
+
