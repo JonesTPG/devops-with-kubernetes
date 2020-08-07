@@ -1,3 +1,5 @@
-k3d cluster create -a 1
-kubectl create deployment 1.02-dep --image=jonestpg/1.02
-kubectl logs -f 1.02-dep-894d4d98b-j9nj9
+kubectl apply -f manifests/deployment.yaml
+
+kubectl logs project-86c7d59cbf-q6vwk
+
+kubectl delete -f manifests/deployment.yaml
