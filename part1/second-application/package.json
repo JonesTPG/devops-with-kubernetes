@@ -1,5 +1,5 @@
 {
-  "name": "main-application",
+  "name": "second-application",
   "version": "1.0.0",
   "description": "DevOps with Kubernetes part 1.",
   "main": "index.js",
@@ -9,8 +9,6 @@
   "author": "Joonas Ryynänen",
   "license": "ISC",
   "dependencies": {
-    "time-stamp": "^2.2.0",
-    "uuid": "^8.2.0",
     "express": "^4.17.1"
   }
 }
