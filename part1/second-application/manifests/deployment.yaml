@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: second-application
+  template:
+    metadata:
+      labels:
+        app: second-application
+    spec:
+      containers:
+        - name: second-application
+          image: jonestpg/1.09
