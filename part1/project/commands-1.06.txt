@@ -1,0 +1,4 @@
+kubectl apply -f manifests/deployment.yaml
+kubectl apply -f manifests/service.yaml
+kubectl delete -f manifests/deployment.yaml
+kubectl delete -f manifests/service.yaml

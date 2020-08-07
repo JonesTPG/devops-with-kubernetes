@@ -1,0 +1,3 @@
+Deployment took care of deployments for us. 
+Service resource will take care of serving the 
+application to connections from outside of the cluster.

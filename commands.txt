@@ -24,6 +24,6 @@ kubectl create deployment 1.01-dep --image=jonestpg/1.01
 View deployments/pods:
 kubectl get deployments/pods
 
-Display logs of a deployment:
+Display logs of a pod:
 kubectl logs -f 1.01-dep-776bc89bd5-tkrzq
 
