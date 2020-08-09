@@ -1,0 +1,8 @@
+docker build -t 1.10-generate-timestamp .
+docker tag 1.10-generate-timestamp jonestpg/1.10-generate-timestamp
+docker push jonestpg/1.10-generate-timestamp
+
+docker build -t 1.10-output-timestamp .
+docker tag 1.10-output-timestamp jonestpg/1.10-output-timestamp
+docker push jonestpg/1.10-output-timestamp
+

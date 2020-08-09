@@ -5,3 +5,14 @@ application to connections from outside of the cluster.
 Incoming Network Access resource Ingress is completely different 
 type of resource from Services. If you’ve got your OSI model memorized, 
 it works in the layer 7 while services work on layer 4.
+
+There are multiple types of volumes; emptyDir volumes are shared filesystems 
+inside a pod, this means that their lifecycle is tied to a pod. 
+When the pod is destroyed the data is lost.
+
+Persistent Volumes is type of storage is what you probably had in 
+mind when we started talking about volumes.
+
+You should not store data with the application or create a 
+dependency to the filesystem by the application. Kubernetes supports 
+cloud providers very well and you can run your own storage system.
