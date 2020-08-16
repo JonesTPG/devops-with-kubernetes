@@ -4,6 +4,9 @@ kubectl cluster-info
 Create cluster with two agent nodes: 
 k3d cluster create -a 2
 
+Create cluster with port-forwarding rules:
+k3d cluster create --port '8082:30080@agent[0]' -p 8081:80@loadbalancer --agents 2
+
 Start/stop clusters:
 k3d cluster start/stop
 
