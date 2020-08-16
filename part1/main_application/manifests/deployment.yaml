@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main-application
+  name: main-application-dep
 spec:
   replicas: 1
   selector:
@@ -12,6 +12,17 @@ spec:
       labels:
         app: main-application
     spec:
+      volumes:
+        - name: shared-volume
+          emptyDir: {}
       containers:
-        - name: main-application
-          image: jonestpg/1.07
+        - name: generate-timestamp
+          image: jonestpg/1.10-generate-timestamp
+          volumeMounts:
+          - name: shared-volume
+            mountPath: /usr/src/app/files
+        - name: output-timestamp
+          image: jonestpg/1.10-output-timestamp
+          volumeMounts:
+          - name: shared-volume
+            mountPath: /usr/src/app/files

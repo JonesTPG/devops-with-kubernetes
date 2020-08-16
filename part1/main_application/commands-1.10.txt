@@ -6,3 +6,14 @@ docker build -t 1.10-output-timestamp .
 docker tag 1.10-output-timestamp jonestpg/1.10-output-timestamp
 docker push jonestpg/1.10-output-timestamp
 
+kubectl apply -f manifests/deployment.yaml
+kubectl apply -f manifests/service.yaml
+kubectl apply -f manifests/ingress.yaml
+
+kubectl logs main-application-dep-77b686f7f9-9tzvs -c output-timestamp
+kubectl logs main-application-dep-77b686f7f9-9tzvs -c generate-timestamp
+
+kubectl delete -f manifests/ingress.yaml
+kubectl delete -f manifests/service.yaml
+kubectl delete -f manifests/deployment.yaml
+
