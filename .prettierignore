@@ -1,1 +1,2 @@
 part1/second-application/manifests/ingress.yaml
+part1/main-application/manifests/deployment.yaml
